@@ -90,12 +90,15 @@ const ScrollRig = () => {
 
 const modelPaths = [
   '/media/lime-compressed.glb',
-  '/media/garlic.glb',
-  '/media/drumstick.glb'
+  '/media/garlic-compressed.glb',
+  '/media/drumstick-compressed.glb',
+  '/media/hotsweet-compressed.glb',
+  '/media/ornament1-compressed.glb',
+  '/media/ornament2.compressed.glb'
 ];
 
 // FOREGROUND LAYER: Large, sharp, pushed to sides
-const foregroundPlacements = Array.from({ length: 10 }).map((_, i) => {
+const foregroundPlacements = Array.from({ length: 22 }).map((_, i) => {
   const path = modelPaths[i % modelPaths.length];
   const side = i % 2 === 0 ? 1 : -1;
   const x = side * (4 + Math.random() * 5); 
@@ -111,7 +114,7 @@ const foregroundPlacements = Array.from({ length: 10 }).map((_, i) => {
 });
 
 // BACKGROUND LAYER: Smaller, far back, dense, to be blurred by DepthOfField
-const backgroundPlacements = Array.from({ length: 15 }).map((_, i) => {
+const backgroundPlacements = Array.from({ length: 30 }).map((_, i) => {
   const path = modelPaths[i % modelPaths.length];
   const x = (Math.random() - 0.5) * 20; // Wide spread
   const y = 10 - (i * 2.5) + (Math.random() * 5 - 2.5);
