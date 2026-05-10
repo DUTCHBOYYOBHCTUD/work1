@@ -27,12 +27,12 @@ const Contact = () => {
             <div className="info-card glassmorphism fade-in" style={{animationDelay: '0.3s'}}>
               <Phone className="info-icon" size={32} />
               <h3>Call Us</h3>
-              <p>+91 98765 43210<br/>Mon-Fri, 9am to 6pm</p>
+              <p>+91 97455 11128<br/>Mon-Fri, 9am to 6pm</p>
             </div>
             <div className="info-card glassmorphism fade-in" style={{animationDelay: '0.4s'}}>
               <Mail className="info-icon" size={32} />
               <h3>Email Us</h3>
-              <p>hello@jozeffoods.com<br/>support@jozeffoods.com</p>
+              <p>jozeffoods@gmail.com</p>
             </div>
           </div>
 

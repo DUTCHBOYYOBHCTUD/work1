@@ -36,8 +36,7 @@ const Checkout = () => {
     setIsProcessing(true);
 
     // --- CLIENT WHATSAPP NUMBER ---
-    // IMPORTANT: Replace this placeholder with the client's actual WhatsApp number (including country code)
-    const CLIENT_WHATSAPP_NUMBER = "919876543210"; 
+    const CLIENT_WHATSAPP_NUMBER = "919745511128"; 
     
     // Constructing the WhatsApp receipt
     let message = `*New COD Order!* 📦\n\n`;
