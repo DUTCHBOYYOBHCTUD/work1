@@ -94,12 +94,6 @@
   color: var(--color-sage);
 }
 
-.card-details, .upi-details {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 24px;
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
 
 .summary-items {
   max-height: 300px;
