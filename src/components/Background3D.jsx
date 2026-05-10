@@ -1,4 +1,4 @@
-import React, { Suspense, useRef, useMemo } from 'react';
+import React, { Suspense, useRef, useMemo, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Float, PresentationControls, useGLTF, Loader, useProgress } from '@react-three/drei';
 import { EffectComposer, DepthOfField } from '@react-three/postprocessing';
@@ -6,6 +6,18 @@ import * as THREE from 'three';
 
 const LoadingLogo = () => {
   const { active } = useProgress();
+  
+  useEffect(() => {
+    if (active) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [active]);
+
   return (
     <div style={{
       position: 'fixed',
