@@ -89,7 +89,7 @@ const ScrollRig = () => {
 };
 
 const modelPaths = [
-  '/media/lime.glb',
+  '/media/lime-compressed.glb',
   '/media/garlic.glb',
   '/media/drumstick.glb',
   '/media/hotsweet.glb',
