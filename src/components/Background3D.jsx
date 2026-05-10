@@ -163,14 +163,14 @@ const Background3D = () => {
       </div>
       
       {/* Custom Logo that syncs perfectly with Drei's Loader */}
-      {/* <LoadingLogo /> */}
+      <LoadingLogo />
       
-      {/* <Loader 
+      <Loader 
         containerStyles={{ background: '#1C2E20', zIndex: 9999 }} 
         innerStyles={{ width: '300px', marginTop: '100px' }} 
         barStyles={{ background: '#FADADD' }} 
         dataStyles={{ color: '#FADADD', fontSize: '1.2rem', fontFamily: 'var(--font-sans)' }}
-      /> */}
+      />
     </>
   );
 };
