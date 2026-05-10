@@ -82,7 +82,7 @@ const modelPaths = [
   '/media/drumstick.glb',
   '/media/hotsweet.glb',
   '/media/ornament1.glb',
-  '/media/ornament2.glb'
+  '/media/ornament2.compressed.glb'
 ];
 
 // FOREGROUND LAYER: Large, sharp, pushed to sides
