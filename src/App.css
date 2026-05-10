@@ -1,0 +1,9 @@
+/* Main app styles are in index.css and component css files */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-content {
+  flex: 1;
+}

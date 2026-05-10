@@ -1,0 +1,19 @@
+body {
+  cursor: none; /* Hide default cursor */
+}
+
+a, button, input, select, textarea, .hover-lift {
+  cursor: none; /* Hide default pointer */
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none; /* So it doesn't block clicks */
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
