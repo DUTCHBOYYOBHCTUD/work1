@@ -81,7 +81,7 @@ const modelPaths = [
   '/media/garlic.glb',
   '/media/drumstick.glb',
   '/media/hotsweet.glb',
-  '/media/ornament1.glb',
+  '/media/ornament1-compressed.glb',
   '/media/ornament2.compressed.glb'
 ];
 
