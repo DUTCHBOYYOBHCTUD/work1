@@ -97,11 +97,20 @@ const modelPaths = [
   '/media/ornament2.compressed.glb'
 ];
 
+const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
+// Mobile Optimization Diet: Slash models from 52 to 20, and pull them into the visible phone frustum
+const fgCount = isMobile ? 8 : 22;
+const bgCount = isMobile ? 12 : 30;
+const fgSpreadOffset = isMobile ? 1.0 : 4;
+const fgSpreadRandom = isMobile ? 2.5 : 5;
+const bgSpread = isMobile ? 8 : 20;
+
 // FOREGROUND LAYER: Large, sharp, pushed to sides
-const foregroundPlacements = Array.from({ length: 22 }).map((_, i) => {
+const foregroundPlacements = Array.from({ length: fgCount }).map((_, i) => {
   const path = modelPaths[i % modelPaths.length];
   const side = i % 2 === 0 ? 1 : -1;
-  const x = side * (4 + Math.random() * 5); 
+  const x = side * (fgSpreadOffset + Math.random() * fgSpreadRandom); 
   const y = 4 - (i * 2.8) + (Math.random() * 2 - 1);
   const z = (Math.random() - 0.5) * 5 - 1.5; // Z near 0
   const scale = 1.8 + Math.random() * 0.6;
@@ -114,9 +123,9 @@ const foregroundPlacements = Array.from({ length: 22 }).map((_, i) => {
 });
 
 // BACKGROUND LAYER: Smaller, far back, dense, to be blurred by DepthOfField
-const backgroundPlacements = Array.from({ length: 30 }).map((_, i) => {
+const backgroundPlacements = Array.from({ length: bgCount }).map((_, i) => {
   const path = modelPaths[i % modelPaths.length];
-  const x = (Math.random() - 0.5) * 20; // Wide spread
+  const x = (Math.random() - 0.5) * bgSpread; // Wide spread
   const y = 10 - (i * 2.5) + (Math.random() * 5 - 2.5);
   const z = -15 - Math.random() * 10; // Deep in the background (Z=-15 to Z=-25)
   const scale = 0.8 + Math.random() * 0.6; // Smaller
@@ -158,7 +167,7 @@ const Background3D = () => {
             </PresentationControls>
           </Suspense>
           
-          <Environment preset="city" />
+          <Environment preset="city" resolution={isMobile ? 64 : 256} />
         </Canvas>
       </div>
       

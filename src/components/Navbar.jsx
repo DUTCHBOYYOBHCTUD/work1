@@ -18,6 +18,11 @@ const Navbar = () => {
   const [isHidden, setIsHidden] = useState(false);
   const { scrollY } = useScroll();
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  React.useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
@@ -40,7 +45,7 @@ const Navbar = () => {
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
       <div className="navbar-container">
-        <div className="mobile-menu">
+        <div className="mobile-menu" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} style={{ cursor: 'pointer' }}>
           <Menu size={24} />
         </div>
         
@@ -99,6 +104,27 @@ const Navbar = () => {
           </motion.button>
         </nav>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      <motion.div 
+        className="mobile-dropdown"
+        initial={false}
+        animate={{ height: isMobileMenuOpen ? 'auto' : 0, opacity: isMobileMenuOpen ? 1 : 0 }}
+        style={{ overflow: 'hidden', width: '100%', background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', borderRadius: '12px', marginTop: isMobileMenuOpen ? '10px' : '0' }}
+      >
+        <nav style={{ display: 'flex', flexDirection: 'column', padding: isMobileMenuOpen ? '10px 0' : '0' }}>
+          {navItems.map((item) => (
+            <Link 
+              key={item.name} 
+              to={item.path} 
+              className="mobile-nav-item"
+              style={{ padding: '12px 20px', color: 'var(--color-text-dark)', fontWeight: 500, borderBottom: '1px solid rgba(0,0,0,0.05)' }}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+      </motion.div>
     </motion.header>
   );
 };
