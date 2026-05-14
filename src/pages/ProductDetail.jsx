@@ -90,7 +90,9 @@ const ProductDetail = () => {
           >
             <motion.div variants={itemVariants} className="badge">{product.category}</motion.div>
             <motion.h1 variants={itemVariants}>{product.name}</motion.h1>
-            <motion.p variants={itemVariants} className="price">₹{selectedVariant.price}</motion.p>
+            <motion.p variants={itemVariants} className="price">
+              {product.inStock ? `₹${selectedVariant.price}` : "Price TBA"}
+            </motion.p>
             
             <motion.p variants={itemVariants} className="short-desc">{product.longDescription}</motion.p>
             
@@ -111,12 +113,12 @@ const ProductDetail = () => {
 
             <motion.div variants={itemVariants} className="add-to-cart-section">
               <div className="qty-selector">
-                <button onClick={() => setQuantity(q => Math.max(1, q - 1))}>-</button>
+                <button onClick={() => setQuantity(q => Math.max(1, q - 1))} disabled={!product.inStock}>-</button>
                 <span>{quantity}</span>
-                <button onClick={() => setQuantity(q => q + 1)}>+</button>
+                <button onClick={() => setQuantity(q => q + 1)} disabled={!product.inStock}>+</button>
               </div>
-              <Button variant="primary" className="add-btn hover-lift" onClick={handleAddToCart}>
-                Add to Cart - ₹{selectedVariant.price * quantity}
+              <Button variant="primary" className="add-btn hover-lift" onClick={handleAddToCart} disabled={!product.inStock}>
+                {product.inStock ? `Add to Cart - ₹${selectedVariant.price * quantity}` : "Coming Soon"}
               </Button>
             </motion.div>
 

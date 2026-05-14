@@ -1,170 +1,1172 @@
 export const products = [
   {
-    id: "p1",
-    name: "Garlic Pickle",
-    category: "Pickles",
-    image: "/media/01.jpg.jpeg",
-    images: ["/media/01.jpg.jpeg", "/media/02.jpg.jpeg"],
-    shortDescription: "Pungent, spicy, and perfectly cured garlic cloves.",
-    longDescription: "Our Garlic Pickle is made with premium garlic cloves slowly aged in traditional spices and cold-pressed oil to deliver a robust, savory flavor.",
-    ingredients: ["Garlic", "Mustard Oil", "Red Chilli", "Turmeric", "Salt", "Spices"],
-    tasteProfile: "Savory, Pungent, Spicy",
-    storageInstructions: "Store in a cool, dry place.",
-    variants: [{ size: "Standard", price: 275 }],
-    inStock: true,
-    badges: ["Best Seller", "Homemade"]
+    "id": "p1",
+    "name": "Tuna Pickle",
+    "category": "Seafood Signature",
+    "image": "/media/tunapickle1.jpeg",
+    "images": [
+      "/media/tunapickle1.jpeg",
+      "/media/tunapickle2.jpeg",
+      "/media/tunapickle3.jpeg"
+    ],
+    "shortDescription": "Premium homemade tuna pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Tuna Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 440
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
   },
   {
-    id: "p2",
-    name: "White Lime Pickle",
-    category: "Pickles",
-    image: "/media/limepickle1.jpeg",
-    images: ["/media/limepickle1.jpeg", "/media/08.JPG.jpeg"],
-    shortDescription: "A unique, mild, and refreshing white lime pickle.",
-    longDescription: "Prepared using traditional methods without heavy red chili powder, allowing the natural zest of white limes to shine through.",
-    ingredients: ["White Lime", "Salt", "Green Chilli", "Ginger", "Mild Spices"],
-    tasteProfile: "Zesty, Mildly Spicy, Tangy",
-    storageInstructions: "Refrigerate after opening.",
-    variants: [{ size: "Standard", price: 240 }],
-    inStock: true,
-    badges: ["Unique", "No Preservatives"]
+    "id": "p2",
+    "name": "Prawn Pickle",
+    "category": "Seafood Signature",
+    "image": "/media/3d_pickle_jar.png",
+    "images": [
+      "/media/3d_pickle_jar.png",
+      "/media/01.jpg.jpeg"
+    ],
+    "shortDescription": "Premium homemade prawn pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Prawn Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 450
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
   },
   {
-    id: "p3",
-    name: "Hot and Sweet Lime Pickle",
-    category: "Pickles",
-    image: "/media/09.jpg.jpeg",
-    images: ["/media/09.jpg.jpeg", "/media/08.JPG.jpeg"],
-    shortDescription: "The perfect balance of fiery heat and sweet notes.",
-    longDescription: "A tantalizing blend of sun-dried limes, jaggery, and hot spices. It plays beautifully with your palate, starting sweet and finishing hot.",
-    ingredients: ["Limes", "Jaggery", "Red Chilli", "Salt", "Mustard Seeds"],
-    tasteProfile: "Sweet, Hot, Tangy",
-    storageInstructions: "Store in a cool, dry place.",
-    variants: [{ size: "Standard", price: 275 }],
-    inStock: true,
-    badges: ["Sweet & Spicy", "Handmade"]
+    "id": "p3",
+    "name": "Clam Meat Pickle",
+    "category": "Seafood Signature",
+    "image": "/media/05.JPG.jpeg",
+    "images": [
+      "/media/05.JPG.jpeg",
+      "/media/06.jpg.jpeg"
+    ],
+    "shortDescription": "Premium homemade clam meat pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Clam Meat Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 350
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
   },
   {
-    id: "p4",
-    name: "Drumstick Pickle",
-    category: "Pickles",
-    image: "/media/04.JPG.jpeg",
-    images: ["/media/04.JPG.jpeg", "/media/05.JPG.jpeg"],
-    shortDescription: "Flavorful and crunchy drumstick pieces in spicy gravy.",
-    longDescription: "A rare regional delicacy. Tender drumstick pieces are carefully pickled to retain their bite, enveloped in a rich, aromatic spice blend.",
-    ingredients: ["Drumstick (Moringa)", "Tamarind", "Oil", "Spices", "Salt"],
-    tasteProfile: "Earthy, Spicy, Tangy",
-    storageInstructions: "Use a dry spoon. Keep tightly sealed.",
-    variants: [{ size: "Standard", price: 275 }],
-    inStock: true,
-    badges: ["Regional Classic", "Homemade"]
+    "id": "p4",
+    "name": "Squid Pickle",
+    "category": "Seafood Signature",
+    "image": "/media/07.jpg.jpeg",
+    "images": [
+      "/media/07.jpg.jpeg",
+      "/media/08.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade squid pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Squid Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 450
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
   },
   {
-    id: "p5",
-    name: "Mushroom Pickle",
-    category: "Pickles",
-    image: "/media/mushpickle1.jpeg",
-    video: "/media/mushroompicklevedio.mp4",
-    images: ["/media/mushpickle1.jpeg", "/media/03.jpg.jpeg"],
-    shortDescription: "A deep, earthy, and umami-packed vegetarian delight.",
-    longDescription: "Made from fresh mushrooms, this pickle offers a deep, earthy umami flavor that pairs incredibly well with rice or flatbreads.",
-    ingredients: ["Mushrooms", "Coconut Oil", "Black Pepper", "Garlic", "Spices"],
-    tasteProfile: "Earthy, Umami, Savory",
-    storageInstructions: "Store in a cool, dry place.",
-    variants: [{ size: "Standard", price: 345 }],
-    inStock: true,
-    badges: ["Premium", "Handmade"]
+    "id": "p5",
+    "name": "Sardine Pickle",
+    "category": "Seafood Signature",
+    "image": "/media/09.jpg.jpeg",
+    "images": [
+      "/media/09.jpg.jpeg",
+      "/media/10.jpg.jpeg"
+    ],
+    "shortDescription": "Premium homemade sardine pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Sardine Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 0
+      }
+    ],
+    "inStock": false,
+    "badges": [
+      "Price TBA"
+    ]
   },
   {
-    id: "p6",
-    name: "Indian Gooseberry (Amla) Pickle",
-    category: "Pickles",
-    image: "/media/gooseberrypickle1.jpeg",
-    video: "/media/gooseberrypicklevedio.mp4",
-    images: ["/media/gooseberrypickle1.jpeg", "/media/gooseberrypickle2.jpeg"],
-    shortDescription: "A healthy, tart, and spicy delight.",
-    longDescription: "Amla is known for its health benefits. Our aging process ensures you get the best of its tangy flavor perfectly balanced with our signature spice mix.",
-    ingredients: ["Gooseberry (Amla)", "Sesame Oil", "Red Chilli", "Spices", "Salt"],
-    tasteProfile: "Tart, Spicy, Earthy",
-    storageInstructions: "Refrigerate after opening.",
-    variants: [{ size: "Standard", price: 194 }],
-    inStock: true,
-    badges: ["Healthy Choice", "No Preservatives"]
+    "id": "p6",
+    "name": "Mackerel Pickle",
+    "category": "Seafood Signature",
+    "image": "/media/DSC_4532.JPG.jpeg",
+    "images": [
+      "/media/DSC_4532.JPG.jpeg",
+      "/media/DSC_4533.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade mackerel pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Mackerel Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 0
+      }
+    ],
+    "inStock": false,
+    "badges": [
+      "Price TBA"
+    ]
   },
   {
-    id: "p7",
-    name: "Traditional Lime Pickle",
-    category: "Pickles",
-    image: "/media/limepickle1.jpeg",
-    images: ["/media/limepickle1.jpeg", "/media/07.jpg.jpeg"],
-    shortDescription: "Zesty, sun-dried limes cured in aromatic spices.",
-    longDescription: "The timeless classic. Sun-dried limes slowly cured with mustard, fenugreek, and a bold mix of spices.",
-    ingredients: ["Limes", "Mustard Oil", "Turmeric", "Red Chilli", "Salt"],
-    tasteProfile: "Zesty, Tangy, Spicy",
-    storageInstructions: "Improves with age. Store in a dark place.",
-    variants: [{ size: "Standard", price: 125 }],
-    inStock: true,
-    badges: ["Classic", "Homemade"]
+    "id": "p7",
+    "name": "Garlic Pickle",
+    "category": "Vegetable Classics",
+    "image": "/media/01.jpg.jpeg",
+    "images": [
+      "/media/01.jpg.jpeg",
+      "/media/02.jpg.jpeg"
+    ],
+    "shortDescription": "Premium homemade garlic pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Garlic Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 280
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
   },
   {
-    id: "p8",
-    name: "Asparagus Pickle",
-    category: "Pickles",
-    image: "/media/06.jpg.jpeg",
-    images: ["/media/06.jpg.jpeg"],
-    shortDescription: "A premium, crunchy, and exotic fusion pickle.",
-    longDescription: "Fresh, crisp asparagus spears pickled with an Indian spice blend. A unique fusion that brings crunch and luxury to your plate.",
-    ingredients: ["Asparagus", "Olive Oil", "Mustard Seeds", "Garlic", "Spices"],
-    tasteProfile: "Crunchy, Tangy, Exotic",
-    storageInstructions: "Refrigerate after opening.",
-    variants: [{ size: "Standard", price: 350 }],
-    inStock: true,
-    badges: ["Exotic", "Premium"]
+    "id": "p8",
+    "name": "Lemon Pickle",
+    "category": "Vegetable Classics",
+    "image": "/media/limepickle1.jpeg",
+    "images": [
+      "/media/limepickle1.jpeg",
+      "/media/02.jpg.jpeg"
+    ],
+    "shortDescription": "Premium homemade lemon pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Lemon Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 125
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
   },
   {
-    id: "p9",
-    name: "Fish Kera Pickle",
-    category: "Pickles",
-    image: "/media/10.jpg.jpeg",
-    images: ["/media/10.jpg.jpeg", "/media/DSC_4532.JPG.jpeg"],
-    shortDescription: "Authentic coastal fish pickle made from fresh Kera.",
-    longDescription: "A coastal classic made with the freshest Kera fish, slow-cooked and preserved in a rich, spicy gravy. An absolute favorite for seafood lovers.",
-    ingredients: ["Kera Fish", "Gingelly Oil", "Ginger", "Garlic", "Red Chillies", "Vinegar"],
-    tasteProfile: "Rich, Spicy, Meaty",
-    storageInstructions: "Keep refrigerated. Use within 3 months.",
-    variants: [{ size: "Standard", price: 450 }],
-    inStock: true,
-    badges: ["Seafood", "Homemade"]
+    "id": "p9",
+    "name": "White Lime Pickle",
+    "category": "Vegetable Classics",
+    "image": "/media/DSC_4534.JPG.jpeg",
+    "images": [
+      "/media/DSC_4534.JPG.jpeg",
+      "/media/DSC_4535.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade white lime pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our White Lime Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 200
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
   },
   {
-    id: "p10",
-    name: "Prawns Pickle",
-    category: "Pickles",
-    image: "/media/tunapickle1.jpeg",
-    images: ["/media/tunapickle1.jpeg", "/media/tunapickle2.jpeg"],
-    shortDescription: "Succulent prawns marinated in fiery spices.",
-    longDescription: "Premium quality prawns cleaned, fried, and pickled in a mouth-watering, highly aromatic spice base.",
-    ingredients: ["Prawns", "Oil", "Spices", "Garlic", "Curry Leaves"],
-    tasteProfile: "Fiery, Rich, Savory",
-    storageInstructions: "Keep refrigerated.",
-    variants: [{ size: "Standard", price: 450 }],
-    inStock: true,
-    badges: ["Premium Catch", "Best Seller"]
+    "id": "p10",
+    "name": "Hot & Sour Lime Pickle",
+    "category": "Vegetable Classics",
+    "image": "/media/DSC_4536.JPG.jpeg",
+    "images": [
+      "/media/DSC_4536.JPG.jpeg",
+      "/media/DSC_4538.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade hot & sour lime pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Hot & Sour Lime Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 250
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
   },
   {
-    id: "s1",
-    name: "Roasted Prawns Powder",
-    category: "Spice Powders",
-    image: "/media/prawnpowder1.jpeg",
-    video: "/media/prawnpowdervedio.mp4",
-    images: ["/media/prawnpowder1.jpeg", "/media/prawnpowder2.jpeg"],
-    shortDescription: "A flavor bomb of roasted prawns and spices.",
-    longDescription: "Dried prawns are slow-roasted with red chillies, coconut, and aromatics, then finely ground. Sprinkle it over rice or use it as a robust seasoning.",
-    ingredients: ["Dried Prawns", "Grated Coconut", "Red Chillies", "Tamarind", "Garlic"],
-    tasteProfile: "Umami, Spicy, Aromatic",
-    storageInstructions: "Keep in an airtight container.",
-    variants: [{ size: "100g", price: 125 }],
-    inStock: true,
-    badges: ["Authentic Taste", "Homemade"]
+    "id": "p11",
+    "name": "Mixed Vegetable Pickle",
+    "category": "Vegetable Classics",
+    "image": "/media/DSC_4539.JPG.jpeg",
+    "images": [
+      "/media/DSC_4539.JPG.jpeg",
+      "/media/DSC_4540.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade mixed vegetable pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Mixed Vegetable Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 227
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p12",
+    "name": "Tomato Pickle",
+    "category": "Vegetable Classics",
+    "image": "/media/DSC_4541.JPG.jpeg",
+    "images": [
+      "/media/DSC_4541.JPG.jpeg",
+      "/media/DSC_4542.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade tomato pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Tomato Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 0
+      }
+    ],
+    "inStock": false,
+    "badges": [
+      "Price TBA"
+    ]
+  },
+  {
+    "id": "p13",
+    "name": "Carrot Pickle",
+    "category": "Vegetable Classics",
+    "image": "/media/carrotpickle2.jpeg",
+    "images": [
+      "/media/carrotpickle2.jpeg",
+      "/media/03.jpg.jpeg"
+    ],
+    "shortDescription": "Premium homemade carrot pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Carrot Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 460
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p14",
+    "name": "Beetroot Pickle",
+    "category": "Vegetable Classics",
+    "image": "/media/DSC_4543.JPG.jpeg",
+    "images": [
+      "/media/DSC_4543.JPG.jpeg",
+      "/media/DSC_4544.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade beetroot pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Beetroot Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 160
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p15",
+    "name": "Potato Pickle",
+    "category": "Vegetable Classics",
+    "image": "/media/DSC_4545.JPG.jpeg",
+    "images": [
+      "/media/DSC_4545.JPG.jpeg",
+      "/media/DSC_4546.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade potato pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Potato Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 160
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p16",
+    "name": "Mushroom Pickle",
+    "category": "Gourmet Vegetable",
+    "image": "/media/mushpickle1.jpeg",
+    "images": [
+      "/media/mushpickle1.jpeg",
+      "/media/04.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade mushroom pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Mushroom Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 350
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p17",
+    "name": "Bitter Gourd Pickle",
+    "category": "Gourmet Vegetable",
+    "image": "/media/DSC_4547.JPG.jpeg",
+    "images": [
+      "/media/DSC_4547.JPG.jpeg",
+      "/media/FUJI3758.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade bitter gourd pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Bitter Gourd Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 200
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p18",
+    "name": "Drumstick Pickle",
+    "category": "Gourmet Vegetable",
+    "image": "/media/FUJI3760.JPG.jpeg",
+    "images": [
+      "/media/FUJI3760.JPG.jpeg",
+      "/media/FUJI3762.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade drumstick pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Drumstick Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 250
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p19",
+    "name": "Asparagus Root Pickle",
+    "category": "Gourmet Vegetable",
+    "image": "/media/FUJI3763.JPG.jpeg",
+    "images": [
+      "/media/FUJI3763.JPG.jpeg",
+      "/media/FUJI3765.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade asparagus root pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Asparagus Root Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 320
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p20",
+    "name": "Chayote Pickle",
+    "category": "Gourmet Vegetable",
+    "image": "/media/FUJI3768.JPG.jpeg",
+    "images": [
+      "/media/FUJI3768.JPG.jpeg",
+      "/media/FUJI3770.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade chayote pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Chayote Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 160
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p21",
+    "name": "Banana Stem Pickle",
+    "category": "Gourmet Vegetable",
+    "image": "/media/FUJI3773.JPG.jpeg",
+    "images": [
+      "/media/FUJI3773.JPG.jpeg",
+      "/media/01.jpg.jpeg"
+    ],
+    "shortDescription": "Premium homemade banana stem pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Banana Stem Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 150
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p22",
+    "name": "Ivy Gourd Pickle",
+    "category": "Gourmet Vegetable",
+    "image": "/media/02.jpg.jpeg",
+    "images": [
+      "/media/02.jpg.jpeg",
+      "/media/03.jpg.jpeg"
+    ],
+    "shortDescription": "Premium homemade ivy gourd pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Ivy Gourd Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 0
+      }
+    ],
+    "inStock": false,
+    "badges": [
+      "Price TBA"
+    ]
+  },
+  {
+    "id": "p23",
+    "name": "Yam Pickle",
+    "category": "Gourmet Vegetable",
+    "image": "/media/04.JPG.jpeg",
+    "images": [
+      "/media/04.JPG.jpeg",
+      "/media/05.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade yam pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Yam Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 0
+      }
+    ],
+    "inStock": false,
+    "badges": [
+      "Price TBA"
+    ]
+  },
+  {
+    "id": "p24",
+    "name": "Indian Gooseberry Pickle",
+    "category": "Fruit & Heritage Pickles",
+    "image": "/media/gooseberrypickle1.jpeg",
+    "images": [
+      "/media/gooseberrypickle1.jpeg",
+      "/media/gooseberrypickle2.jpeg",
+      "/media/gooseberrypickle3.jpeg"
+    ],
+    "shortDescription": "Premium homemade indian gooseberry pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Indian Gooseberry Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 210
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p25",
+    "name": "Dates Pickle",
+    "category": "Fruit & Heritage Pickles",
+    "image": "/media/06.jpg.jpeg",
+    "images": [
+      "/media/06.jpg.jpeg",
+      "/media/07.jpg.jpeg"
+    ],
+    "shortDescription": "Premium homemade dates pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Dates Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 0
+      }
+    ],
+    "inStock": false,
+    "badges": [
+      "Price TBA"
+    ]
+  },
+  {
+    "id": "p26",
+    "name": "Bilimbi Pickle",
+    "category": "Fruit & Heritage Pickles",
+    "image": "/media/08.JPG.jpeg",
+    "images": [
+      "/media/08.JPG.jpeg",
+      "/media/09.jpg.jpeg"
+    ],
+    "shortDescription": "Premium homemade bilimbi pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Bilimbi Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 150
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p27",
+    "name": "Star Fruit Pickle",
+    "category": "Fruit & Heritage Pickles",
+    "image": "/media/10.jpg.jpeg",
+    "images": [
+      "/media/10.jpg.jpeg",
+      "/media/DSC_4532.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade star fruit pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Star Fruit Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 200
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p28",
+    "name": "Passion Fruit Pickle",
+    "category": "Fruit & Heritage Pickles",
+    "image": "/media/DSC_4533.JPG.jpeg",
+    "images": [
+      "/media/DSC_4533.JPG.jpeg",
+      "/media/DSC_4534.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade passion fruit pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Passion Fruit Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 0
+      }
+    ],
+    "inStock": false,
+    "badges": [
+      "Price TBA"
+    ]
+  },
+  {
+    "id": "p29",
+    "name": "Mint Pickle",
+    "category": "Fruit & Heritage Pickles",
+    "image": "/media/DSC_4535.JPG.jpeg",
+    "images": [
+      "/media/DSC_4535.JPG.jpeg",
+      "/media/DSC_4536.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade mint pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Mint Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 0
+      }
+    ],
+    "inStock": false,
+    "badges": [
+      "Price TBA"
+    ]
+  },
+  {
+    "id": "p30",
+    "name": "Nutmeg Pickle",
+    "category": "Fruit & Heritage Pickles",
+    "image": "/media/DSC_4538.JPG.jpeg",
+    "images": [
+      "/media/DSC_4538.JPG.jpeg",
+      "/media/DSC_4539.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade nutmeg pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Nutmeg Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 230
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p31",
+    "name": "Papaya Pickle",
+    "category": "Fruit & Heritage Pickles",
+    "image": "/media/DSC_4540.JPG.jpeg",
+    "images": [
+      "/media/DSC_4540.JPG.jpeg",
+      "/media/DSC_4541.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade papaya pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Papaya Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 175
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p32",
+    "name": "Jack Fruit Pickle",
+    "category": "Fruit & Heritage Pickles",
+    "image": "/media/DSC_4542.JPG.jpeg",
+    "images": [
+      "/media/DSC_4542.JPG.jpeg",
+      "/media/DSC_4543.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade jack fruit pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Jack Fruit Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 200
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p33",
+    "name": "Paneer Pickle",
+    "category": "Protein & Speciality",
+    "image": "/media/DSC_4544.JPG.jpeg",
+    "images": [
+      "/media/DSC_4544.JPG.jpeg",
+      "/media/DSC_4545.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade paneer pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Paneer Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 450
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p34",
+    "name": "Beef Pickle",
+    "category": "Protein & Speciality",
+    "image": "/media/DSC_4546.JPG.jpeg",
+    "images": [
+      "/media/DSC_4546.JPG.jpeg",
+      "/media/DSC_4547.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade beef pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Beef Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 0
+      }
+    ],
+    "inStock": false,
+    "badges": [
+      "Price TBA"
+    ]
+  },
+  {
+    "id": "p35",
+    "name": "Chicken Pickle",
+    "category": "Protein & Speciality",
+    "image": "/media/FUJI3758.JPG.jpeg",
+    "images": [
+      "/media/FUJI3758.JPG.jpeg",
+      "/media/FUJI3760.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade chicken pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Chicken Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 0
+      }
+    ],
+    "inStock": false,
+    "badges": [
+      "Price TBA"
+    ]
+  },
+  {
+    "id": "p36",
+    "name": "Soya Chunks Pickle",
+    "category": "Protein & Speciality",
+    "image": "/media/FUJI3762.JPG.jpeg",
+    "images": [
+      "/media/FUJI3762.JPG.jpeg",
+      "/media/FUJI3763.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade soya chunks pickle prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Soya Chunks Pickle. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 175
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p37",
+    "name": "Prawns Powder",
+    "category": "Speciality Condiments",
+    "image": "/media/prawnpowder1.jpeg",
+    "images": [
+      "/media/prawnpowder1.jpeg",
+      "/media/prawnpowder2.jpeg",
+      "/media/prawnpowder3.jpeg"
+    ],
+    "shortDescription": "Premium homemade prawns powder prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Prawns Powder. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 125
+      }
+    ],
+    "inStock": true,
+    "badges": [
+      "Homemade",
+      "Premium"
+    ]
+  },
+  {
+    "id": "p38",
+    "name": "Idiyirachi",
+    "category": "Speciality Condiments",
+    "image": "/media/FUJI3765.JPG.jpeg",
+    "images": [
+      "/media/FUJI3765.JPG.jpeg",
+      "/media/FUJI3768.JPG.jpeg"
+    ],
+    "shortDescription": "Premium homemade idiyirachi prepared with authentic traditional recipes and the finest ingredients.",
+    "longDescription": "Experience the authentic taste of our Idiyirachi. Carefully crafted using age-old recipes, premium ingredients, and natural preservation methods to bring you the true essence of homemade goodness. Perfect to pair with your favorite meals.",
+    "ingredients": [
+      "Premium Ingredients",
+      "Natural Spices",
+      "Cold-pressed Oil",
+      "Salt"
+    ],
+    "tasteProfile": "Authentic, Flavorful",
+    "storageInstructions": "Store in a cool, dry place. Refrigerate after opening.",
+    "variants": [
+      {
+        "size": "Standard",
+        "price": 0
+      }
+    ],
+    "inStock": false,
+    "badges": [
+      "Price TBA"
+    ]
   }
 ];

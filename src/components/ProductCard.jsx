@@ -55,15 +55,18 @@ const ProductCard = ({ product }) => {
             />
           )}
           <div className="quick-actions" style={{ zIndex: 2 }}>
-            <Button variant="primary" onClick={handleAddToCart} className="quick-add-btn">
-              <ShoppingBag size={18} /> Quick Add
+            <Button variant="primary" onClick={handleAddToCart} className="quick-add-btn" disabled={!product.inStock}>
+              <ShoppingBag size={18} /> {product.inStock ? "Quick Add" : "Price TBA"}
             </Button>
           </div>
         </div>
         <div className="product-info" style={{ position: 'relative', zIndex: 2 }}>
           <div className="category-badge">{product.category}</div>
           <h3 className="product-title">{product.name}</h3>
-          <p className="product-price">₹{defaultVariant.price} <span>/ {defaultVariant.size}</span></p>
+          <p className="product-price">
+            {product.inStock ? `₹${defaultVariant.price} ` : "Price TBA "}
+            {product.inStock && <span>/ {defaultVariant.size}</span>}
+          </p>
         </div>
       </Link>
     </Tilt>
