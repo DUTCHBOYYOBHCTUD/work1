@@ -5,7 +5,6 @@ import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CartDrawer from './components/CartDrawer';
-import Background3D from './components/Background3D';
 import CustomCursor from './components/CustomCursor';
 
 import Home from './pages/Home';
@@ -31,7 +30,6 @@ function App() {
         <ScrollToTop />
         <CustomCursor />
         <div className="app-container">
-          <Background3D />
           <Navbar />
           <CartDrawer />
           <main className="main-content">

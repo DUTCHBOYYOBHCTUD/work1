@@ -7,11 +7,7 @@ import './Home.css';
 import { ShieldCheck, Heart, Leaf } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-const WaveDivider = () => (
-  <svg viewBox="0 0 1440 120" className="wave-divider" preserveAspectRatio="none" style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: '80px', zIndex: 2, display: 'block' }}>
-    <path d="M0,60 C320,120 420,0 720,60 C1020,120 1120,0 1440,60 L1440,120 L0,120 Z" fill="var(--color-cream)"></path>
-  </svg>
-);
+const WaveDivider = () => null; // Removed for clean minimalism
 
 const Home = () => {
   const featuredProducts = products.slice(0, 3);
@@ -42,43 +38,63 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      {/* Background Blobs for organic aesthetic */}
-      <div className="blob blob-1"></div>
-      <div className="blob blob-2"></div>
-      <div className="blob blob-3"></div>
+      {/* Clean Abstract Shapes */}
+      <div className="bg-shape shape-orange"></div>
+      <div className="bg-shape shape-green"></div>
 
-      {/* Hero Section */}
-      <section className="hero-section" style={{ position: 'relative', overflow: 'hidden', minHeight: '90vh' }}>
-        <motion.div style={{ y: heroY, opacity: heroOpacity, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }} />
-        
-        <motion.div 
-          className="container hero-content"
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-          style={{ 
-            position: 'relative', 
-            zIndex: 1, 
-            display: 'flex', 
-            flexDirection: 'column', 
-            justifyContent: 'center', 
-            height: '100%'
-          }}
-        >
-          <motion.h1 variants={itemVariants} style={{ fontSize: '6rem', lineHeight: '1.1', textShadow: '0 10px 30px rgba(0,0,0,0.15)', position: 'relative', zIndex: 10, color: 'var(--color-text-dark)', paddingBottom: '20px' }}>Homemade Goodness <br/>in Every Jar</motion.h1>
-          <motion.p variants={itemVariants} style={{ fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 40px auto', color: 'var(--color-text-light)' }}>
-            Experience the authentic taste of tradition with our premium homemade pickles and spice powders. 
-            Crafted with love, patience, and no artificial preservatives.
-          </motion.p>
-          <motion.div className="hero-actions" variants={itemVariants}>
-            <Link to="/shop">
-              <Button variant="primary">Shop Now</Button>
-            </Link>
-            <Link to="/about">
-              <Button variant="outline">Our Story</Button>
-            </Link>
+      <section className="hero-section minimal-hero">
+        <div className="container hero-container">
+          <motion.div 
+            className="hero-text-content"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+          >
+            <motion.h1 variants={itemVariants}>
+              Pure & <br/> Organic <br/> Food Products
+            </motion.h1>
+            <motion.p variants={itemVariants} className="hero-subtitle">
+              From the land of spices to the world. 100% pure and organically grown spices.
+            </motion.p>
+            <motion.div variants={itemVariants} className="hero-actions">
+              <Link to="/shop">
+                <Button variant="primary">SHOP NOW</Button>
+              </Link>
+            </motion.div>
           </motion.div>
-        </motion.div>
+
+          <motion.div 
+            className="hero-image-content"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            {/* The Creative Minimal Floating Images */}
+            <div className="image-collage">
+              <motion.img 
+                src="/media/prawnpowder1.jpeg" 
+                alt="Spices" 
+                className="collage-img main-img"
+                animate={{ y: [0, -15, 0] }}
+                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+              />
+              <motion.img 
+                src="/media/carrotpickle2.jpeg" 
+                alt="Pickle" 
+                className="collage-img float-img-1"
+                animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }}
+                transition={{ repeat: Infinity, duration: 8, ease: "easeInOut", delay: 1 }}
+              />
+              <motion.img 
+                src="/media/01.jpg.jpeg" 
+                alt="Garlic" 
+                className="collage-img float-img-2"
+                animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 7, ease: "easeInOut", delay: 2 }}
+              />
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Categories */}

@@ -50,14 +50,10 @@ const Shop = () => {
 
   return (
     <div className="shop-page" style={{ paddingTop: '160px', paddingBottom: '80px', position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
-      {/* Background Blobs for organic aesthetic */}
-      <div className="blob blob-1" style={{ top: '10%', left: '-5%', opacity: 0.4 }}></div>
-      <div className="blob blob-2" style={{ bottom: '10%', right: '-5%', opacity: 0.4 }}></div>
-
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div 
-          className="shop-header glassmorphism"
-          style={{ padding: '40px', borderRadius: 'var(--radius-lg)', textAlign: 'center', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px auto' }}
+          className="shop-header minimal-panel"
+          style={{ padding: '40px', borderRadius: 'var(--radius-lg)', textAlign: 'center', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px auto', backgroundColor: 'var(--color-bg-alt)' }}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -68,7 +64,7 @@ const Shop = () => {
 
         <div className="shop-layout">
           {/* Sidebar / Filters */}
-          <aside className="shop-sidebar glassmorphism" style={{ padding: '24px', borderRadius: '16px' }}>
+          <aside className="shop-sidebar minimal-panel" style={{ padding: '24px', borderRadius: '16px', backgroundColor: 'var(--color-bg-alt)' }}>
             <div className="filter-group">
               <div className="search-bar">
                 <Search size={20} className="search-icon" />

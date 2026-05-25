@@ -2,15 +2,14 @@
 
 :root {
   /* Brand Colors */
-  --color-peach: #FADADD;
-  --color-sage: #C1D7AE;
-  --color-cream: #FFF5E1;
-  --color-lavender: #E6E6FA;
-  --color-beige: #F5F5DC;
+  --color-primary: #FF8A00; /* Bio Mountain Orange */
+  --color-secondary: #2E7D32; /* Bio Mountain Green */
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F9F9F9;
   
   /* Text & Accents */
-  --color-text-dark: #2C3E2D; /* Dark olive/greenish gray for high contrast */
-  --color-text-light: #5A6D5B;
+  --color-text-dark: #1A1A1A;
+  --color-text-light: #666666;
   --color-white: #FFFFFF;
   --color-border: rgba(44, 62, 45, 0.1);
 
@@ -42,7 +41,7 @@
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-cream);
+  background-color: var(--color-bg);
   color: var(--color-text-dark);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;

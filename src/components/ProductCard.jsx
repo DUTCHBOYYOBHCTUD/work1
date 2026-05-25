@@ -4,22 +4,16 @@ import { useCart } from '../context/CartContext';
 import Button from './Button';
 import './ProductCard.css';
 import { ShoppingBag } from 'lucide-react';
-import Tilt from 'react-parallax-tilt';
-import { motion, useMotionValue, useMotionTemplate } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
+import Button from './Button';
+import './ProductCard.css';
+import { ShoppingBag } from 'lucide-react';
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
   const defaultVariant = product.variants[0];
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
 
-  const handleMouseMove = ({ currentTarget, clientX, clientY }) => {
-    const { left, top } = currentTarget.getBoundingClientRect();
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
-  };
-
-  const background = useMotionTemplate`radial-gradient(400px circle at ${mouseX}px ${mouseY}px, rgba(255,255,255,0.2), transparent 80%)`;
 
   const handleAddToCart = (e) => {
     e.preventDefault();
@@ -28,17 +22,12 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <Tilt tiltMaxAngleX={8} tiltMaxAngleY={8} scale={1.02} transitionSpeed={2000} className="product-card-container">
+    <div className="product-card-container minimal-card">
       <Link 
         to={`/product/${product.id}`} 
-        className="product-card fade-in glassmorphism" 
-        onMouseMove={handleMouseMove}
+        className="product-card fade-in" 
         style={{ position: 'relative', overflow: 'hidden', display: 'block' }}
       >
-        <motion.div
-          className="spotlight-overlay"
-          style={{ background, position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none' }}
-        />
         
         <div className="product-image-wrapper">
           {product.image.endsWith('.mp4') ? (
@@ -69,7 +58,7 @@ const ProductCard = ({ product }) => {
           </p>
         </div>
       </Link>
-    </Tilt>
+    </div>
   );
 };
 
