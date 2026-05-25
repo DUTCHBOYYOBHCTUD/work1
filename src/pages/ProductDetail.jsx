@@ -6,7 +6,6 @@ import { useCart } from '../context/CartContext';
 import Button from '../components/Button';
 import './ProductDetail.css';
 import { motion } from 'framer-motion';
-import Tilt from 'react-parallax-tilt';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -46,8 +45,6 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail-page section-padding" style={{ position: 'relative', overflow: 'hidden' }}>
-      {/* Aesthetic Blob */}
-      <div className="blob blob-1" style={{ top: '20%', left: '40%', opacity: 0.3 }}></div>
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
@@ -63,8 +60,8 @@ const ProductDetail = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} transitionSpeed={2500} glareEnable={true} glareMaxOpacity={0.1}>
-              <div className="main-image-placeholder floating-element" style={{ background: 'transparent', backdropFilter: 'none', overflow: 'hidden', padding: 0 }}>
+            <div className="product-image-container" style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
+              <div className="main-image-placeholder" style={{ background: 'var(--color-bg-alt)', overflow: 'hidden', padding: 0 }}>
                 {product.video ? (
                   <video 
                     src={product.video} 
@@ -79,7 +76,7 @@ const ProductDetail = () => {
                   />
                 )}
               </div>
-            </Tilt>
+            </div>
           </motion.div>
           
           <motion.div 
@@ -122,7 +119,7 @@ const ProductDetail = () => {
               </Button>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="trust-badges glassmorphism">
+            <motion.div variants={itemVariants} className="trust-badges minimal-panel">
               {product.badges.map((badge, idx) => (
                 <div key={idx} className="trust-badge">
                   {badge.includes("Home") || badge.includes("Hand") ? <Heart size={18}/> : 
