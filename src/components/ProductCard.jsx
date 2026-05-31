@@ -4,11 +4,7 @@ import { useCart } from '../context/CartContext';
 import Button from './Button';
 import './ProductCard.css';
 import { ShoppingBag } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
-import Button from './Button';
-import './ProductCard.css';
-import { ShoppingBag } from 'lucide-react';
+// removed duplicate imports
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
