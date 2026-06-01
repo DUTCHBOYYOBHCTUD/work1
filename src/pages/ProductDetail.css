@@ -20,11 +20,14 @@
   flex: 1;
   position: sticky;
   top: 100px;
+  display: flex;
+  justify-content: center;
 }
 
 .main-image-placeholder {
   width: 100%;
-  aspect-ratio: 1;
+  max-width: 500px;
+  aspect-ratio: 4 / 5;
   background: linear-gradient(135deg, var(--color-beige) 0%, var(--color-cream) 100%);
   border-radius: var(--radius-lg);
   display: flex;

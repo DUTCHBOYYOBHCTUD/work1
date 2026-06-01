@@ -13,14 +13,14 @@ const Home = () => {
   const featuredProducts = products.slice(0, 3);
   const { scrollYProgress } = useScroll();
   
-  // Parallax transforms mapped to scroll progress
-  const yMain = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const yFloat1 = useTransform(scrollYProgress, [0, 1], [0, -250]);
-  const yFloat2 = useTransform(scrollYProgress, [0, 1], [0, -150]);
+  // Gentle Parallax transforms mapped to scroll progress
+  const yMain = useTransform(scrollYProgress, [0, 1], [0, -40]);
+  const yFloat1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const yFloat2 = useTransform(scrollYProgress, [0, 1], [0, -70]);
   
-  const rotateMain = useTransform(scrollYProgress, [0, 1], [0, 5]);
-  const rotateFloat1 = useTransform(scrollYProgress, [0, 1], [0, -15]);
-  const rotateFloat2 = useTransform(scrollYProgress, [0, 1], [0, 10]);
+  const rotateMain = useTransform(scrollYProgress, [0, 1], [0, 2]);
+  const rotateFloat1 = useTransform(scrollYProgress, [0, 1], [0, -8]);
+  const rotateFloat2 = useTransform(scrollYProgress, [0, 1], [0, 5]);
 
   const containerVariants = {
     hidden: { opacity: 0 },

@@ -4,14 +4,20 @@
   /* Brand Colors */
   --color-primary: #FF8A00; /* Bio Mountain Orange */
   --color-secondary: #2E7D32; /* Bio Mountain Green */
-  --color-bg: #FFFFFF;
-  --color-bg-alt: #F9F9F9;
+  --color-peach: #FADADD;
+  --color-sage: #C1D7AE;
+  --color-cream: #FFF5E1;
+  --color-lavender: #E6E6FA;
+  --color-beige: #F5F5DC;
+  
+  --color-bg: var(--color-cream);
+  --color-bg-alt: var(--color-beige);
   
   /* Text & Accents */
-  --color-text-dark: #1A1A1A;
-  --color-text-light: #666666;
+  --color-text-dark: #2C3E2D;
+  --color-text-light: #5A6D5B;
   --color-white: #FFFFFF;
-  --color-border: rgba(44, 62, 45, 0.1);
+  --color-border: rgba(44, 62, 45, 0.15);
 
   /* Typography */
   --font-serif: 'Playfair Display', serif;
