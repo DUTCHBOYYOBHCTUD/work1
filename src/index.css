@@ -2,22 +2,22 @@
 
 :root {
   /* Brand Colors */
-  --color-primary: #FF8A00; /* Bio Mountain Orange */
-  --color-secondary: #2E7D32; /* Bio Mountain Green */
-  --color-peach: #FADADD;
-  --color-sage: #C1D7AE;
-  --color-cream: #FFF5E1;
-  --color-lavender: #E6E6FA;
-  --color-beige: #F5F5DC;
+  --color-primary: #ff7a00; /* Vibrant orange */
+  --color-secondary: #d35400; /* Burnt orange */
+  --color-peach: #E27D60; /* Rich Terracotta */
+  --color-sage: #cda885; /* Replaced with brown */
+  --color-cream: #111211; /* Dark background */
+  --color-lavender: #1a1a1a; /* Dark gray */
+  --color-beige: #1a1a1a; /* Dark gray */
   
-  --color-bg: var(--color-cream);
-  --color-bg-alt: var(--color-beige);
+  --color-bg: #111211;
+  --color-bg-alt: #1a1a1a;
   
   /* Text & Accents */
-  --color-text-dark: #2C3E2D;
-  --color-text-light: #5A6D5B;
+  --color-text-dark: #fdfdfd; /* White text for dark mode */
+  --color-text-light: #c4c4c4; /* Light gray text for dark mode */
   --color-white: #FFFFFF;
-  --color-border: rgba(44, 62, 45, 0.15);
+  --color-border: rgba(255, 255, 255, 0.1);
 
   /* Typography */
   --font-serif: 'Playfair Display', serif;
@@ -130,7 +130,7 @@ body::before {
 h1 {
   font-size: 4rem;
   letter-spacing: -1.5px;
-  background: linear-gradient(135deg, var(--color-text-dark), #6e886c);
+  background: linear-gradient(135deg, var(--color-text-dark), #ff7a00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

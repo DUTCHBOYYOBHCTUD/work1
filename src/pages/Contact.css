@@ -112,5 +112,10 @@
 @media (max-width: 768px) {
   .contact-layout {
     flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 40px;
+  }
+  .contact-info, .contact-form-container {
+    width: 100%;
   }
 }

@@ -1,8 +1,9 @@
 .home-page {
   position: relative;
-  overflow: hidden;
+  overflow: clip; /* clip prevents horizontal scroll without breaking position: sticky! */
   background-color: var(--color-bg);
 }
+
 
 /* Minimal Abstract Background Shapes */
 .bg-shape {
@@ -14,21 +15,34 @@
 }
 
 .shape-orange {
-  width: 800px;
-  height: 800px;
+  width: 1000px;
+  height: 1000px;
   background-color: var(--color-primary);
-  opacity: 0.1;
+  opacity: 0.8;
   top: -200px;
   right: -300px;
+  filter: blur(150px);
 }
 
 .shape-green {
-  width: 600px;
-  height: 600px;
-  background-color: var(--color-secondary);
-  opacity: 0.05;
-  bottom: 200px;
+  width: 800px;
+  height: 800px;
+  background-color: var(--color-sage);
+  opacity: 0.8;
+  bottom: -200px;
   left: -200px;
+  filter: blur(140px);
+}
+
+.mango-watermark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65vw; /* Cover 65% of the screen width */
+  height: auto; /* Natural height scaling based on aspect ratio */
+  opacity: 1;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Minimal Hero Layout */
@@ -42,27 +56,30 @@
 .hero-container {
   display: flex;
   align-items: center;
-  gap: 60px;
+  justify-content: flex-end; /* Push to far right */
+  width: 100%;
+  padding: 0 5%; /* 5% breathing room from the right edge */
   position: relative;
   z-index: 1;
 }
 
 .hero-text-content {
-  flex: 1;
-  padding-right: 40px;
+  flex: 0 0 45%; /* Give the text box a nice proportion */
+  max-width: 550px;
 }
 
 .hero-text-content h1 {
   font-size: 4.5rem;
   line-height: 1.1;
   font-weight: 800;
-  color: var(--color-text-dark);
+  color: #1E5631; /* Bold Green */
   margin-bottom: 24px;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: var(--color-text-light);
+  font-weight: 600; /* Made bold */
+  color: #2E7D32; /* Slightly lighter bold green */
   margin-bottom: 40px;
   max-width: 480px;
   line-height: 1.6;
@@ -177,7 +194,7 @@
 
 /* Features */
 .features-section {
-  background-color: var(--color-bg-alt);
+  background-color: transparent;
   padding: 100px 0;
 }
 
@@ -204,12 +221,24 @@
 
 /* Minimal Card styling for features */
 .minimal-card {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-lg);
   padding: 40px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 40px;
 }
 
 .minimal-card:hover {
@@ -223,7 +252,6 @@
     padding-top: 40px;
   }
   .hero-text-content {
-    padding-right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -237,5 +265,12 @@
 @media (max-width: 768px) {
   .hero-text-content h1 {
     font-size: 3rem;
+  }
+  
+  .mango-watermark {
+    width: 140vw; /* Make it significantly larger on mobile */
+    top: -5%;
+    left: -15%;
+    opacity: 0.9;
   }
 }
