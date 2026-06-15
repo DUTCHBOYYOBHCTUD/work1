@@ -45,12 +45,12 @@ const FAQ = () => {
   return (
     <div className="faq-page section-padding">
       <div className="container">
-        <div className="faq-header text-center fade-in">
+        <div className="faq-header text-center fade-in glassmorphism" style={{ padding: '40px', borderRadius: 'var(--radius-lg)', marginBottom: '40px' }}>
           <h1>Frequently Asked Questions</h1>
           <p>Find answers to common questions about our products, shipping, and policies.</p>
         </div>
 
-        <div className="faq-list fade-in" style={{animationDelay: '0.2s'}}>
+        <div className="faq-list fade-in glassmorphism" style={{animationDelay: '0.2s', padding: '40px', borderRadius: 'var(--radius-lg)' }}>
           {faqs.map((faq, idx) => (
             <FAQItem key={idx} question={faq.question} answer={faq.answer} />
           ))}

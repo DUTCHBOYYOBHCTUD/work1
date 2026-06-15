@@ -30,6 +30,11 @@ function App() {
         <ScrollToTop />
         <CustomCursor />
         <div className="app-container">
+          {/* Global Ambient Aura Layer to ensure frosted glass is visible globally */}
+          <div className="global-ambient-bg" style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1, overflow: 'hidden', pointerEvents: 'none' }}>
+            <div style={{ position: 'absolute', top: '20%', left: '10%', width: '30vw', height: '30vw', background: 'radial-gradient(circle, rgba(255,122,0,0.08) 0%, transparent 70%)', borderRadius: '50%', filter: 'blur(60px)' }} />
+            <div style={{ position: 'absolute', bottom: '10%', right: '10%', width: '40vw', height: '40vw', background: 'radial-gradient(circle, rgba(30,86,49,0.08) 0%, transparent 70%)', borderRadius: '50%', filter: 'blur(80px)' }} />
+          </div>
           <Navbar />
           <CartDrawer />
           <main className="main-content">

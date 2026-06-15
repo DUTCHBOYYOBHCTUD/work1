@@ -119,7 +119,7 @@ const ProductDetail = () => {
               </Button>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="trust-badges minimal-panel">
+            <motion.div variants={itemVariants} className="trust-badges glassmorphism">
               {product.badges.map((badge, idx) => (
                 <div key={idx} className="trust-badge">
                   {badge.includes("Home") || badge.includes("Hand") ? <Heart size={18}/> : 
