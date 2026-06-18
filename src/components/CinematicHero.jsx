@@ -44,6 +44,23 @@ const CONFIG = {
   baseModelRotationY: Math.PI, // 180 degrees to show the Jozef Foods logo! (Tweak if needed)
 };
 
+// Wrapper to completely disable expensive physics/event-listeners on mobile
+const ControlsWrapper = ({ isMobile, children }) => {
+  if (isMobile) return <>{children}</>;
+  return (
+    <PresentationControls
+      global
+      config={{ mass: 2, tension: 500 }}
+      snap={{ mass: 4, tension: 1500 }}
+      rotation={[0, 0, 0]}
+      polar={[-Math.PI / 4, Math.PI / 4]}
+      azimuth={[-Math.PI / 2, Math.PI / 2]}
+    >
+      {children}
+    </PresentationControls>
+  );
+};
+
 // Custom component to map Framer Motion values to ThreeJS objects on every frame
 const AssemblyAnimator = ({ finalCapY, capRotateY, assemblyX, assemblyY, assemblyRotateY, capRef, assemblyRef }) => {
   useFrame(() => {
@@ -217,8 +234,16 @@ const CinematicHero = () => {
                 <PageLoader />
               </Html>
             }>
-              {/* Uses a locally downloaded HDRI to completely bypass your network/browser blocking issue! */}
-              <Environment files="/models/studio.hdr" />
+              {/* Heavy HDRI disabled on mobile, replaced with hyper-cheap simple lighting */}
+              {isMobile ? (
+                <>
+                  <ambientLight intensity={1.5} />
+                  <directionalLight intensity={2} position={[5, 5, 5]} />
+                  <directionalLight intensity={1} position={[-5, 5, -5]} color="#ff7a00" />
+                </>
+              ) : (
+                <Environment files="/models/studio.hdr" />
+              )}
 
               <AssemblyAnimator
                 finalCapY={finalCapY}
@@ -230,14 +255,7 @@ const CinematicHero = () => {
                 assemblyRef={assemblyRef}
               />
 
-              <PresentationControls
-                global
-                config={{ mass: 2, tension: 500 }}
-                snap={{ mass: 4, tension: 1500 }}
-                rotation={[0, 0, 0]}
-                polar={[-Math.PI / 4, Math.PI / 4]}
-                azimuth={[-Math.PI / 2, Math.PI / 2]}
-              >
+              <ControlsWrapper isMobile={isMobile}>
                 {/* 
                   The assemblyRef handles the X, Y translation and Y rotation.
                   We keep the ContactShadows OUTSIDE this rotating group so the floor doesn't tilt!
@@ -267,7 +285,7 @@ const CinematicHero = () => {
                   far={4} 
                   color="#000000" 
                 />
-              </PresentationControls>
+              </ControlsWrapper>
             </Suspense>
           </Canvas>
         </div>

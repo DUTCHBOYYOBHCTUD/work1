@@ -3,10 +3,17 @@ import { motion } from 'framer-motion';
 import './CustomCursor.css';
 
 const CustomCursor = () => {
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
+    // Immediate performance exit on mobile devices!
+    if (window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window) {
+      setIsTouchDevice(true);
+      return;
+    }
+
     const mouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -33,6 +40,9 @@ const CustomCursor = () => {
       window.removeEventListener("mouseover", mouseOver);
     };
   }, []);
+
+  // DO NOT render any DOM nodes or framer-motion loops on mobile!
+  if (isTouchDevice) return null;
 
   const variants = {
     default: {
