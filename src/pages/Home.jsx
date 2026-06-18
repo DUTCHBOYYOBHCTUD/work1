@@ -24,6 +24,9 @@ const Home = () => {
   ];
 
   useEffect(() => {
+    // Disable mouse tracking completely on mobile/touch devices to prevent re-render scroll lag
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+
     const handleMouseMove = (e) => {
       // Normalize to -1 to 1 for microscopic mapping
       setMousePos({
