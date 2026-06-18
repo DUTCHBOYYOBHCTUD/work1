@@ -264,28 +264,30 @@ const CinematicHero = () => {
                 <group ref={assemblyRef}>
                   {/* Jar Body */}
                   <group rotation={[0, CONFIG.baseModelRotationY, 0]}>
-                    <JarModel scale={isMobile ? CONFIG.jarScale * mobileScale : CONFIG.jarScale} />
+                    <JarModel isMobile={isMobile} scale={isMobile ? CONFIG.jarScale * mobileScale : CONFIG.jarScale} />
                   </group>
 
                   {/* Jar Cap */}
                   <group ref={capRef}>
                     <group rotation={[0, CONFIG.baseModelRotationY, 0]}>
-                      <CapModel scale={isMobile ? CONFIG.capScale * mobileScale : CONFIG.capScale} />
+                      <CapModel isMobile={isMobile} scale={isMobile ? CONFIG.capScale * mobileScale : CONFIG.capScale} />
                     </group>
                   </group>
                 </group>
                 
-                {/* Global Floor Shadow that captures everything */}
-                <ContactShadows 
-                  frames={isMobile ? 1 : Infinity}
-                  resolution={isMobile ? 256 : 512}
-                  position={[0, isMobile ? -1.8 : -2.5, 0]} 
-                  opacity={0.8} 
-                  scale={25} 
-                  blur={2.5} 
-                  far={4} 
-                  color="#000000" 
-                />
+                {/* Global Floor Shadow that captures everything - REMOVED on mobile for performance */}
+                {!isMobile && (
+                  <ContactShadows 
+                    frames={Infinity}
+                    resolution={512}
+                    position={[0, -2.5, 0]} 
+                    opacity={0.8} 
+                    scale={25} 
+                    blur={2.5} 
+                    far={4} 
+                    color="#000000" 
+                  />
+                )}
               </ControlsWrapper>
             </Suspense>
           </Canvas>

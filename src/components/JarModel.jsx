@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function JarModel(props) {
+export function JarModel({ isMobile, ...props }) {
   const { scene } = useGLTF('/models/jar-draco.glb')
-  // We clone the scene if we plan to use it multiple times, but here primitive is fine
+  
+  useEffect(() => {
+    scene.traverse((child) => {
+      if (child.isMesh) {
+        // Disable expensive shadow maps
+        child.castShadow = false;
+        child.receiveShadow = false;
+        
+        // Massive Mobile Optimization: Nuke the "True Glass" refraction
+        if (isMobile && child.material) {
+          if (child.material.transmission !== undefined) {
+            child.material.transmission = 0; // Disable refraction
+            child.material.transparent = true;
+            child.material.opacity = 0.85; // Fake the glass
+            child.material.roughness = 0.3; // Cheaper highlight
+          }
+        }
+      }
+    });
+  }, [scene, isMobile]);
+
   return <primitive object={scene} {...props} />
 }
 
