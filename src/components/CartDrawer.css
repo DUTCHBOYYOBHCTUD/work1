@@ -14,12 +14,13 @@
 .cart-drawer {
   width: 100%;
   max-width: 400px;
-  background-color: var(--color-white);
+  background-color: #23150D; /* Very Dark Brown */
+  color: var(--color-primary); /* Orange text */
   height: 100%;
   display: flex;
   flex-direction: column;
   animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
 }
 
 @keyframes slideInRight {
@@ -32,7 +33,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(255, 122, 0, 0.2);
 }
 
 .cart-header h2 {
@@ -41,14 +42,17 @@
 }
 
 .close-btn {
-  background-color: var(--color-cream);
+  background-color: #2E1A0F;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-dark);
+  color: var(--color-primary);
+}
+.close-btn:hover {
+  background-color: #3E2312;
 }
 
 .cart-items {
@@ -63,7 +67,7 @@
 .empty-cart {
   text-align: center;
   margin: auto;
-  color: var(--color-text-light);
+  color: #ff9d42; /* Lighter orange */
 }
 
 .empty-cart p {
@@ -75,13 +79,13 @@
   gap: 16px;
   align-items: center;
   padding-bottom: 20px;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(255, 122, 0, 0.2);
 }
 
 .cart-item-image {
   width: 80px;
   height: 80px;
-  background-color: var(--color-beige);
+  background-color: #1a0f08;
   border-radius: var(--radius-sm);
 }
 
@@ -97,7 +101,7 @@
 
 .item-variant {
   font-size: 0.8rem;
-  color: var(--color-text-light);
+  color: #ff9d42; /* Lighter orange */
   margin-bottom: 8px;
 }
 
@@ -114,18 +118,19 @@
 .qty-controls {
   display: flex;
   align-items: center;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 122, 0, 0.4);
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
 .qty-controls button {
   padding: 4px 8px;
-  background-color: var(--color-cream);
+  background-color: #2E1A0F;
+  color: var(--color-primary);
 }
 
 .qty-controls button:hover {
-  background-color: var(--color-beige);
+  background-color: #3E2312;
 }
 
 .qty-controls span {
@@ -145,8 +150,8 @@
 
 .cart-footer {
   padding: 24px;
-  border-top: 1px solid var(--color-border);
-  background-color: var(--color-cream);
+  border-top: 1px solid rgba(255, 122, 0, 0.2);
+  background-color: #23150D;
 }
 
 .subtotal {
@@ -155,12 +160,12 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 8px;
-  color: var(--color-text-dark);
+  color: var(--color-primary);
 }
 
 .shipping-note {
   font-size: 0.8rem;
-  color: var(--color-text-light);
+  color: #ff9d42;
   margin-bottom: 16px;
   text-align: center;
 }

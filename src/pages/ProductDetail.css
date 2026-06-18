@@ -103,21 +103,23 @@
 
 .variant-btn {
   padding: 10px 20px;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 122, 0, 0.4);
   border-radius: var(--radius-sm);
-  background-color: transparent;
-  color: var(--color-text-dark);
+  background-color: #2E1A0F;
+  color: var(--color-primary);
   transition: all var(--transition-fast);
 }
 
 .variant-btn:hover {
-  border-color: var(--color-sage);
+  border-color: var(--color-primary);
+  background-color: #3E2312;
 }
 
 .variant-btn.active {
-  background-color: var(--color-sage);
-  border-color: var(--color-sage);
-  font-weight: 600;
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #2E1A0F;
+  font-weight: 700;
 }
 
 .add-to-cart-section {

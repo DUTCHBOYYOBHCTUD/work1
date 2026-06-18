@@ -22,6 +22,7 @@ import { Environment, ContactShadows, PresentationControls, Html } from '@react-
 import AmbientSpices from './AmbientSpices';
 import { JarModel } from './JarModel';
 import { CapModel } from './CapModel';
+import PageLoader from './PageLoader';
 import './CinematicHero.css';
 
 // --- EASY TWEAK CONFIGURATION ---
@@ -208,7 +209,7 @@ const CinematicHero = () => {
 
             <Suspense fallback={
               <Html center>
-                <div style={{ color: '#db4224', fontFamily: 'Inter', letterSpacing: '2px' }}>LOADING 3D...</div>
+                <PageLoader />
               </Html>
             }>
               {/* Uses a locally downloaded HDRI to completely bypass your network/browser blocking issue! */}

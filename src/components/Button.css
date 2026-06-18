@@ -11,19 +11,23 @@
 }
 
 .btn-primary {
-  background-color: var(--color-sage);
-  color: var(--color-text-dark);
+  background-color: var(--color-primary); /* Vibrant Orange */
+  color: #2E1A0F; /* Dark Brown text */
+  font-weight: 700;
 }
 .btn-primary:hover {
-  background-color: #a8c494;
+  background-color: #ff9d42; /* Lighter Orange */
+  box-shadow: 0 4px 15px rgba(255, 122, 0, 0.4);
 }
 
 .btn-secondary {
-  background-color: var(--color-peach);
-  color: var(--color-text-dark);
+  background-color: #2E1A0F; /* Deep Brown */
+  color: var(--color-primary); /* Orange text */
+  border: 1px solid var(--color-primary);
 }
 .btn-secondary:hover {
-  background-color: #f2c7cb;
+  background-color: #3E2312;
+  box-shadow: 0 4px 15px rgba(255, 122, 0, 0.2);
 }
 
 .btn-outline {
