@@ -278,6 +278,11 @@
     width: 50%;
     max-width: 300px;
     padding: 20px;
+    /* Massive Mobile Optimization: Disable backdrop-filter over WebGL */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(20, 10, 5, 0.85); /* Solid translucent dark brown instead */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   }
   .cinematic-headline {
     font-size: 2.8rem; /* Increased font size */

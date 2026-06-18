@@ -182,7 +182,7 @@ const CinematicHero = () => {
         <motion.div className="cinematic-ambient-bg" style={{ opacity: bgOpacity, background: backgroundStyle, zIndex: 1 }} />
         
         <motion.div className="ambient-spices-wrapper" style={{ opacity: contentOpacity }}>
-          <AmbientSpices />
+          {!isMobile && <AmbientSpices />}
         </motion.div>
 
         <motion.div className="side-content side-left" style={{ opacity: sideContentOpacity, y: sideContentY }}>
@@ -258,6 +258,7 @@ const CinematicHero = () => {
                 
                 {/* Global Floor Shadow that captures everything */}
                 <ContactShadows 
+                  frames={isMobile ? 1 : Infinity}
                   resolution={isMobile ? 256 : 512}
                   position={[0, isMobile ? -1.8 : -2.5, 0]} 
                   opacity={0.8} 
