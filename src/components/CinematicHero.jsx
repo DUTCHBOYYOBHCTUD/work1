@@ -204,7 +204,12 @@ const CinematicHero = () => {
 
         {/* --- TRUE 3D CANVAS PORTAL --- */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 10, pointerEvents: 'auto' }}>
-          <Canvas shadows camera={{ position: [0, 0, 8], fov: 45 }}>
+          <Canvas 
+            shadows={!isMobile} 
+            dpr={isMobile ? [1, 1.5] : [1, 2]} 
+            camera={{ position: [0, 0, 8], fov: 45 }}
+            gl={{ antialias: !isMobile, powerPreference: "high-performance" }}
+          >
             <DynamicLighting smoothProgress={smoothProgress} />
 
             <Suspense fallback={
@@ -253,6 +258,7 @@ const CinematicHero = () => {
                 
                 {/* Global Floor Shadow that captures everything */}
                 <ContactShadows 
+                  resolution={isMobile ? 256 : 512}
                   position={[0, isMobile ? -1.8 : -2.5, 0]} 
                   opacity={0.8} 
                   scale={25} 
