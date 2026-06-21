@@ -12,7 +12,8 @@ const CartDrawer = () => {
   if (!isCartOpen) return null;
 
   return (
-    <div className="cart-drawer-overlay" onClick={() => setIsCartOpen(false)}>
+  
+  <div className="cart-drawer-overlay" onClick={() => setIsCartOpen(false)}>
       <div className="cart-drawer" onClick={e => e.stopPropagation()}>
         <div className="cart-header">
           <h2>Your Cart</h2>
