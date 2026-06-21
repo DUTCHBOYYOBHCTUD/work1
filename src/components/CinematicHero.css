@@ -33,12 +33,7 @@
   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
-.ambient-spices-wrapper {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-}
+
 
 /* 3D Assembly Container */
 .cinematic-assembly {

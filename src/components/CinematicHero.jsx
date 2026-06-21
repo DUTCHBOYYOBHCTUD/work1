@@ -19,7 +19,6 @@ const useMediaQuery = (query) => {
 };
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, ContactShadows, PresentationControls, Html } from '@react-three/drei';
-import AmbientSpices from './AmbientSpices';
 import { JarModel } from './JarModel';
 import { CapModel } from './CapModel';
 import PageLoader from './PageLoader';
@@ -198,10 +197,6 @@ const CinematicHero = () => {
         
         <motion.div className="cinematic-ambient-bg" style={{ opacity: bgOpacity, background: backgroundStyle, zIndex: 1 }} />
         
-        <motion.div className="ambient-spices-wrapper" style={{ opacity: bgOpacity, zIndex: 5 }}>
-          {!isMobile && <AmbientSpices />}
-        </motion.div>
-
         <motion.div className="side-content side-left" style={{ opacity: sideContentOpacity, y: sideContentY }}>
           <h3>Sun-Dried Mangoes</h3>
           <p>Handpicked at the peak of summer, our sun-dried mangoes deliver a burst of authentic tanginess. Carefully preserved using generations-old techniques to maintain their rich texture.</p>
