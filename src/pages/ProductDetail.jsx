@@ -5,7 +5,7 @@ import { products } from '../data/products';
 import { useCart } from '../context/CartContext';
 import Button from '../components/Button';
 import './ProductDetail.css';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -14,6 +14,16 @@ const ProductDetail = () => {
   
   const [selectedVariant, setSelectedVariant] = useState(product?.variants[0]);
   const [quantity, setQuantity] = useState(1);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Image slideshow effect
+  React.useEffect(() => {
+    if (!product || !product.images || product.images.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentImageIndex(prev => (prev + 1) % product.images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [product]);
 
   if (!product) {
     return (
@@ -61,7 +71,7 @@ const ProductDetail = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="product-image-container" style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
-              <div className="main-image-placeholder" style={{ background: 'var(--color-bg-alt)', overflow: 'hidden', padding: 0 }}>
+              <div className="main-image-placeholder" style={{ background: 'var(--color-bg-alt)', overflow: 'hidden', padding: 0, position: 'relative' }}>
                 {product.video ? (
                   <video 
                     src={product.video} 
@@ -69,11 +79,18 @@ const ProductDetail = () => {
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 ) : (
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  />
+                  <AnimatePresence mode="popLayout">
+                    <motion.img 
+                      key={currentImageIndex}
+                      src={product.images && product.images.length > 0 ? product.images[currentImageIndex] : product.image} 
+                      alt={product.name}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.8 }}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}
+                    />
+                  </AnimatePresence>
                 )}
               </div>
             </div>
