@@ -134,7 +134,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
   overflow: hidden;
-  background-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.05); /* Match dark theme */
 }
 
 .qty-selector button {
@@ -144,7 +144,7 @@
 }
 
 .qty-selector button:hover {
-  background-color: var(--color-beige);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .qty-selector span {
@@ -163,7 +163,8 @@
   gap: 12px;
   margin-bottom: 40px;
   padding: 24px;
-  background-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.03); /* Match dark theme */
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
 }
