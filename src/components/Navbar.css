@@ -12,8 +12,9 @@
 .dynamic-island {
   pointer-events: auto; /* Re-enable clicks on the island */
   background: rgba(15, 15, 15, 0.6);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transform: translateZ(0); /* Force hardware compositing for Safari */
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   padding: 8px 12px;
