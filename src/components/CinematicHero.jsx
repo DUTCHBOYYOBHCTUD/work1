@@ -198,7 +198,7 @@ const CinematicHero = () => {
         
         <motion.div className="cinematic-ambient-bg" style={{ opacity: bgOpacity, background: backgroundStyle, zIndex: 1 }} />
         
-        <motion.div className="ambient-spices-wrapper" style={{ opacity: contentOpacity }}>
+        <motion.div className="ambient-spices-wrapper" style={{ opacity: bgOpacity, zIndex: 5 }}>
           {!isMobile && <AmbientSpices />}
         </motion.div>
 

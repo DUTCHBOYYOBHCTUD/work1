@@ -40,8 +40,8 @@ const AmbientSpices = () => {
             height: p.size,
             borderRadius: p.type === 'circle' ? '50%' : '0',
             backgroundColor: p.type === 'circle' ? p.color : 'transparent',
-            opacity: 0.15, // Very subtle
-            filter: 'blur(2px)' // Depth of field effect
+            opacity: 0.4, // Increased visibility
+            filter: 'blur(1px)' // Reduced blur to make them more distinct
           }}
           animate={{
             y: [`${p.y}vh`, `${p.y - 20}vh`, `${p.y}vh`], // Float up and down
@@ -58,7 +58,7 @@ const AmbientSpices = () => {
             <img 
               src={p.src} 
               alt="spice" 
-              style={{ width: '100%', height: '100%', objectFit: 'contain', opacity: 0.3 }} 
+              style={{ width: '100%', height: '100%', objectFit: 'contain', opacity: 0.6 }} 
             />
           )}
         </motion.div>
