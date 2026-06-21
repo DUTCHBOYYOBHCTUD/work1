@@ -11,6 +11,12 @@ const Shop = () => {
   const categoryFilter = searchParams.get('category') || 'All';
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Dynamically extract unique categories from products data
+  const categories = useMemo(() => {
+    const allCats = products.map(p => p.category);
+    return ['All', ...new Set(allCats)].filter(Boolean); // Filter out any undefined categories
+  }, []);
+
   const filteredProducts = useMemo(() => {
     return products.filter(product => {
       const matchCategory = categoryFilter === 'All' || product.category === categoryFilter;
@@ -80,7 +86,7 @@ const Shop = () => {
             <div className="filter-group">
               <h3>Categories</h3>
               <ul className="category-list">
-                {['All', 'Pickles', 'Spice Powders'].map(cat => (
+                {categories.map(cat => (
                   <li key={cat}>
                     <button 
                       className={`filter-btn ${categoryFilter === cat ? 'active' : ''}`}
